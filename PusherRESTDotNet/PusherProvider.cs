@@ -14,9 +14,10 @@ namespace PusherRESTDotNet
 		private readonly string _applicationId;
 		private readonly string _applicationKey;
 		private readonly string _applicationSecret;
-        private PusherAuthenticationHelper _authHelper;
+        private readonly PusherAuthenticationHelper _authHelper;
+	    private readonly IWebProxy _webProxy;
 
-		public PusherProvider(string applicationId, string applicationKey, string applicationSecret)
+		public PusherProvider(string applicationId, string applicationKey, string applicationSecret, IWebProxy webProxy = null)
 		{
 			if (String.IsNullOrEmpty(applicationId))
 				throw new ArgumentNullException("applicationId");
@@ -28,7 +29,7 @@ namespace PusherRESTDotNet
 			_applicationSecret = applicationSecret;
 			_applicationKey = applicationKey;
 			_applicationId = applicationId;
-
+		    _webProxy = webProxy;
             _authHelper = new PusherAuthenticationHelper(_applicationId, _applicationKey, _applicationSecret);
 		}
 
@@ -46,6 +47,10 @@ namespace PusherRESTDotNet
 
 		    using(var client = new WebClient())
 		    {
+                if(_webProxy != null)
+                {
+                    client.Proxy = _webProxy;
+                }
 		        client.Encoding = Encoding.UTF8;
 		        client.UploadString(requestUrl, request.JsonData);
 		    }
