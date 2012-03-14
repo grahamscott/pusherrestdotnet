@@ -1,15 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual Web Developer Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PusherRESTDotNet", "PusherRESTDotNet\PusherRESTDotNet.csproj", "{FEDAD44D-208E-4F99-BE08-6C1257B59D4A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PusherRESTDotNet.Tests", "PusherRESTDotNet.Tests\PusherRESTDotNet.Tests.csproj", "{29ADB209-999D-4A86-A006-01609B6B670D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{13FCFB53-1898-4AE9-B229-F917B8F52DB2}"
-	ProjectSection(SolutionItems) = preProject
-		PusherRESTDotNet\PusherRESTDotNet.nuspec = PusherRESTDotNet\PusherRESTDotNet.nuspec
-		README.md = README.md
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
