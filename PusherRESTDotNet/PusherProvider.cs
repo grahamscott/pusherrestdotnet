@@ -52,6 +52,7 @@ namespace PusherRESTDotNet
                     client.Proxy = _webProxy;
                 }
 		        client.Encoding = Encoding.UTF8;
+                client.Headers.Add("Content-Type", "application/json");
 		        client.UploadString(requestUrl, request.JsonData);
 		    }
 		}
