@@ -1,3 +1,6 @@
+THIS PROJECT IS DORMANT, PLEASE USE https://github.com/leggetter/pusher-rest-dotnet INSTEAD
+
+
 The Pusher REST .NET project is implementation of the Pusher REST API in C#.
 
 It provides functionality to let you trigger events using the Pusher REST API in addition to 
