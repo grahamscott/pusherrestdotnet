@@ -1,4 +1,4 @@
-THIS PROJECT IS DORMANT, PLEASE USE https://github.com/leggetter/pusher-rest-dotnet INSTEAD
+THIS PROJECT IS DORMANT, PLEASE USE https://github.com/leggetter/pusher-dotnet-server INSTEAD
 
 
 The Pusher REST .NET project is implementation of the Pusher REST API in C#.
