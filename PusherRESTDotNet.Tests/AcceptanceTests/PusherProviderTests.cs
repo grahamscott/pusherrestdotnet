@@ -36,6 +36,16 @@ namespace PusherRESTDotNet.Tests.AcceptanceTests
 			_defaultProvider.Trigger(request);
 		}
 
+        [Test]
+        [Explicit("Set your credentials in app.config for this test to pass")]
+        public void CanSendPercentageSignInEventMessage()
+        {
+            SetupDefaultProvider();
+            var request = new TestPusherRequest("test_channel", "my_event", @"{""some"":""data %""}");
+
+            _defaultProvider.Trigger(request);
+        }
+
 		[Test]
 		[Explicit("Set your credentials in app.config for this test to pass")]
 		public void CanTriggerPushWithAnonymousObject()
